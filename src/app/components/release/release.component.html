@@ -1,0 +1,9 @@
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" [src]="release.images | image">
+  <div class="card-body">
+    <h5 class="card-title">
+      {{release.name}}
+    </h5>
+    <a *ngFor="let artist of release.artists" [routerLink]="[ '/artist',  artist.id]" style="margin-right: 5px;"><span class="badge badge-pill badge-primary">{{artist.name}}</span></a>
+  </div>
+</div>

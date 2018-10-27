@@ -1,0 +1,13 @@
+<div class="container-fluid">
+  <div class="content">
+    <div class="title">
+        <app-title></app-title>
+    </div>
+    <div class="releases-container">
+      <div class="card-columns">
+          <app-release *ngFor="let release of releases" [release]="release"></app-release>
+      </div>
+    </div>
+  </div>
+  
+</div>
