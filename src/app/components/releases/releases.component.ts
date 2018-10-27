@@ -8,6 +8,7 @@ import { SpotifyService } from 'src/app/services/spotify.service';
 })
 export class ReleasesComponent {
   releases:any = [];
+  title:string = 'New Releases';
   constructor(private spotify: SpotifyService) {
     this.spotify.getReleases()
       .subscribe( (response:any) => this.releases = response.albums.items );

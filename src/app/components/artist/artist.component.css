@@ -1,0 +1,13 @@
+.img-artist{
+    border-radius: 50%;
+    width: 200px;
+}
+.header{
+    align-items: center;
+}
+.content-table{
+    margin-top: 100px;
+}
+.img-album{
+    width: 50px;
+}

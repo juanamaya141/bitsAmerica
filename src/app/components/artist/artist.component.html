@@ -1,3 +1,42 @@
-<p>
-  artist works!
-</p>
+<div class="container-fluid m-5">
+    <div class="content">
+      <div class="title">
+          <app-title [title]="title"></app-title>
+      </div>
+    </div>
+    <div class="header row"> 
+        <div class="col-2"></div>
+        <div class="col">
+            <img [src]="artist.images | image" class="img-thumbnail img-artist" alt="">
+        </div>
+        <div class="col">
+            <h2>{{artist.name}}</h2>
+            <a href="">Ir a la página del artista</a>
+        </div>
+        <div class="col-6"></div>
+    </div>
+    <div class="content-table container">
+        <div class="col-10">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Foto</th>
+                        <th scope="col">Album</th>
+                        <th scope="col">Canción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let track of tracks">
+    
+                        <td><img [src]="track.album.images | image" class="img-album" alt=""></td>
+                        <td>{{track.album.name}}</td>
+                        <td>{{track.name}}</td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+        
+    </div>
+</div>
+
